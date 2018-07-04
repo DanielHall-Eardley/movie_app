@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"  href="./style.css">
+    <title>Home</title>
+</head>
+<body>
+
+<div class="container">
+   <div class="headerbox">
+   <h1 class="header"><%=movies.title%></h1>
+   </div>
+       <div class="search">
+       <form action='/search' method='get'>
+       <input type="text" name="input" placeholder="Search movies...">
+       <button type="submit">Submit</button>
+       </form>
+       </div>
+</div>
+
+<div class="media">
+   <iframe width="100%" height="100%" src=<%=movies.video%> frameborder="0" allow="autoplay; encrypted-media"></iframe>
+</div>
+
+<div class="container">
+    <h4 class="media-heading"><%=movies.title%></h4>
+    <p><%=movies.plot%></p>
+</div>
+
+<div class="details">
+       <img id="media-picture" src=<%=movies.img%> alt="Image">
+
+        <dl class="table">
+        <h5>Movie Details</h5>
+        
+        <dt>Year</dt>
+        <dd><%=movies.year%></dd>
+
+        <dt>Rating</dt>
+        <dd><%=movies.rated%></dd>
+
+        <dt>Release date</dt>
+        <dd><%=movies.released%></dd>
+
+        <dt>Runtime</dt>
+        <dd><%=movies.runtime%></dd> 
+        <dt>Director</dt>
+        <dd><%=movies.director%></dd>
+
+        <dt>Writer</dt>
+        <dd><%=movies.writer%></dd>
+
+        <dt>Actors</dt>
+        <dd><%=movies.actor%></dd>
+
+        <dt>Language</dt>
+        <dd><%=movies.langauge%></dd>
+
+        <dt>Country</dt>
+        <dd><%=movies.country%></dd>
+        </dl>
+
+        <div class="home-but">
+        <a href="http://localhost:8080/">
+        <button class="home">Home</button>
+        </a>
+        </div>
+</div>
+
+<style>
+.search {
+  border: 1px, black, solid;
+  border-radius: 8px;
+  background-color: beige; }
+
+.media {
+  height: 94vh; }
+
+.media-object {
+  width: 20vw; }
+
+.media-list, .container, .media-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 8px;
+  background-color: #f5d4d4; }
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 8px;
+  background-color: #f5d4d4; }
+
+#media-picture {
+  height: 80vh;
+  padding: 2%; }
+
+.table {
+  padding: 2%;
+  width: 40vw; }
+
+.home {
+  border-radius: 8px;
+  align-self: flex-end;
+  background-color: beige; }
+
+.home-but {
+  padding-top: 70vh; }
+</style>
+  
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

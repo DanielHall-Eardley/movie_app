@@ -1,0 +1,56 @@
+$pad: 2%;
+$border_rad: 8px;
+$bckgrd_but: beige;
+
+
+.search {
+    border: 1px, black, solid;
+    border-radius: $border_rad;
+    background-color: $bckgrd_but;
+}
+
+.media {
+    height: 94vh;
+}
+
+.media-object {
+    width: 20vw;
+}
+
+.media-list, .container, .media-body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: $pad;
+    margin: 2%;
+    border-radius: $border_rad;
+    background-color: rgb(245, 212, 212);
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $pad;
+    margin: 2%;
+    border-radius: $border_rad;
+    background-color: rgb(245, 212, 212);
+}
+
+#media-picture {
+    height: 80vh;
+   padding: $pad
+}
+
+.table {
+    padding: $pad;
+    width: 40vw;
+}
+.home{
+    border-radius: $border_rad;
+    align-self: flex-end;
+    background-color:$bckgrd_but;
+}
+.home-but{
+    padding-top:70%
+}
